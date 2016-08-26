@@ -9,6 +9,7 @@
   "author": "Karime Saad",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0", 
+    "ejs": "^2.3.4"
   }
 }

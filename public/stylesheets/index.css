@@ -1,0 +1,28 @@
+.page-heading{
+	color: pink;
+}
+
+#id-example{
+	text-align: center;
+}
+
+
+
+
+body {
+    background-image: url(background/wall4.png);
+    background-repeat: repeat;
+    position: relative;
+  /*  display: block;
+    width: 500px;*/
+}
+.foreground-image {
+    background-image: url(background/tileable_wood_texture.png);
+    background-repeat: repeat;
+    position: relative;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
