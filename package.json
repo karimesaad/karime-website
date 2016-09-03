@@ -2,14 +2,22 @@
   "name": "website",
   "version": "1.0.0",
   "description": "My website",
-  "main": "app.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "predeploy": "echo im about to deploy",
+    "postdeploy": "echo ive deployed"
   },
   "author": "Karime Saad",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0", 
-    "ejs": "^2.3.4"
+    "cfenv": "^1.0.3",
+    "ejs": "^2.3.4",
+    "express": "^4.14.0",
+    "serve-favicon": "^2.3.0"
+  },
+  "engines": {
+    "node": "6.3.1",
+    "npm": "3.10.3"
   }
 }

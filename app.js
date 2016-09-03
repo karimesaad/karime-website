@@ -1,23 +1,18 @@
 var express = require("express");
 var app = express();
 var router = express.Router();
+var favicon = require("serve-favicon");
+var cfenv = require('cfenv');
 
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views'); // defines where our HTML files are placed
 app.set('view engine', 'ejs'); // used for HTML rendering
 app.engine('html', require('ejs').__express); // rendering HTML files through EJS
 require("./router/main.js")(app);
+app.use(favicon(__dirname + '/public/logo-name/karime-name2.png'));
 
-var port = 3000;
-app.listen(port);
-console.log("server is running in port localhost:" + port);
-var request = require('request');
-console.log("Fetching data from ourmanna...");
-request('http://www.ourmanna.com/verses/api/get/?format=text', function(error, response, body) {
-			//console.log(error);
-			//console.log(response);
-			//console.log(body); 
-            if (!error && response.statusCode == 200) {
-                console.log(body) // Show the HTML for the Google homepage. 
-            } 
-        })
+var appEnv = cfenv.getAppEnv();
+// start server on the specified port and binding host 
+app.listen(appEnv.port, '0.0.0.0', function() { // print a message when the server starts listening 
+	console.log("server starting on " + appEnv.url); 
+});
