@@ -47,6 +47,47 @@ $(document).ready(function(){
 		  }, 3000);
 	});
 
+	$('#email-form').submit(function(formText){
+		var name = formText.target.name.value;
+		var email = formText.target.email.value;
+		var phone = formText.target.phone.value;
+		var message = formText.target.message.value;
+
+		console.log("Message received from: "+ name);
+		console.log("Email: " + email);
+		console.log("Phone Number: " + phone);
+		console.log("Message: " + message);
+
+		var jqxhr = $.ajax({
+		  	method: "POST",
+		  	url: "/contact",
+		  	data: {
+		  		name: name,
+		  		email: email,
+		  		phone: phone,
+		  		message: message
+		  		}
+			})
+		  .done(function( msg ) {
+		  	console.log(msg);
+		  })
+		  .fail(function(err) {
+		    console.error("Couldn't send e-mail");
+		    console.error(err);
+		  })
+		  .always(function() {
+
+		  });
+
+
+
+
+
+		return false; // don't refresh the page!
+	});
+
+
+
 
 
 });

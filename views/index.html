@@ -58,9 +58,33 @@
 
   <div class="sections" id="contact-me-section">
     <h1 class="page-heading">Contact me!</h1>
-    <img src="mi-foto/foto-kari3.jpg" class="foto-karime" alt="" style="width:290px;height340px", align= "left"> 
-    <p class="text"> <br>FORM to send message, linkedin, etc<br><br></p>
-    <center><p class="text" style="font-size: 20px; line-height: 180%;"> MEOW MEOW </p></center>
+    <h3> text text text!! </h3>
+    <div class="contact-form">
+      <form id="email-form" method= "post" action="contact">
+        <label for="name"> Name 
+          <input class="input-contact" id="name" type="text" name="name" placeholder="Enter your name here"> 
+        </label>
+        <label for="e-mail"> E-mail 
+          <input class="input-contact" id="e-mail" type="email" name="email" placeholder="Enter your e-mail here"> 
+        </label>
+        <label class="label-class" for="phone"> Phone Number
+          <input class="input-contact" id="phone" type="phone" name="phone" placeholder="Enter your phone number here"> 
+        </label>
+        <label for="text-form"> Message
+          <textarea id="text-form" rows='10' cols='95' name="message" placeholder="Enter your message here!"></textarea>
+        </label>
+        <button type="submit" id="send-button"> SEND </button>
+      </form>
+    </div>
+    <div class="social-media">
+      <h3> You can also contact me here: </h3>
+      <div id="facebook-container">
+        <i class="fa fa-facebook-official fa-4x"  aria-hidden="true"></i>
+      </div>
+      <div id="linkedin-container">
+        <i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i>
+      </div>
+    </div> 
   </div> <!-- .sections #contact-me-section -->
 
   <button id="load-example">Click Me</button>
