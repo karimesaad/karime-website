@@ -36,8 +36,7 @@ module.exports = function(app) {
 			message = req.body.message || null;
 
 		var cfenv = require('cfenv'),
-			appEnv = cfenv.getAppEnv(),
-			privateConfig = require("../config/private.json");
+			appEnv = cfenv.getAppEnv();
 
 		if(!(!!name && !!email && !!phone && !!message)){
 			let errMessage = "Did not provide all required inputs.";
@@ -53,6 +52,7 @@ module.exports = function(app) {
 		var username,
 			password;
 		if(appEnv.isLocal){
+			var privateConfig = require("../config/private.json");
 			// These environment variables exist on local drive, NOT on github
 			username = privateConfig.sendgrid.credentials.username;
 			password = privateConfig.sendgrid.credentials.password;
