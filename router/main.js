@@ -67,7 +67,7 @@ module.exports = function(app) {
 
 		sendgrid.send({
 		    to: sendgridemail,
-		    from: name,
+		    from: email,
 		    subject: "Website Message from " + name,
 		    text: `Name:${name}, Phone Number: ${phone}, E-mail Address: ${email}, Message: ${message}.`,
 		    html: `<b>Name:</b> ${name} <br> <b>Phone number:</b> ${phone} <br><b>E-mail address:</b>${email}<br><b> Message:</b>${message}`

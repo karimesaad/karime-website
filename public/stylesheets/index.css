@@ -13,15 +13,13 @@ body {
     background-image: url(background/swirl.png);
     background-repeat: repeat;
     position: relative;
-
 }
-.foreground-image {
-    background-image: url(background/purty_wood.png);
-    background-repeat: repeat;
+
+/*.background-1 {
+    background-image: url(background/background2.png);
     position: relative;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 1280px;
+    height: 800px;*/
 }
 
 .foto-karime {
@@ -78,10 +76,6 @@ hr{
     margin: 0px 20px 0px 20px;
 }
 
-.fa-spinner{
-    visibility: hidden;
-}
-
 #email-form{
     display: flex;
     flex-direction: column;
@@ -123,4 +117,21 @@ input[type=text]:focus,input[type=email]:focus, textarea:focus {
 label.label-class{
     position: relative;
     right: 29px;
+}
+
+.error-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.status-form{
+    display: none;
+    position: absolute;
+     top: 10px;
+    color: red;
+}
+
+.loadingemail{
+    font-size: 25px;
 }
